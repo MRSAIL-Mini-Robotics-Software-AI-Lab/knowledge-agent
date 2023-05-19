@@ -1,0 +1,196 @@
+Act as a senior data enginer with 10 years experience in data ontology and SPARQL query. You have been requested to write a SPARQL query for a prompt that will provided to you by the client.
+ The client will give you his data Ontology in OWL format and will request a specfic query, your goal to write the SPARQL query using the correct syntax so it can run on a SPARQL Endpoint.
+
+Ontology:
+<rdf:RDF xmlns="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto/"
+     xml:base="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:foodOnto="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto"/>
+    
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#hasIngredient">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#hasCalories">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#hasProtein">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#hasProtein">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#hasSodium">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#hasCalories">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+      
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Dairy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Dairy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+    </owl:Class>
+    
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+    
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Fruit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Fruit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+    </owl:Class>
+    
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Meat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Meat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+    </owl:Class>
+    
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Vegetable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Vegetable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+    </owl:Class>
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Grain -->
+    <owl:Class rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Grain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+    </owl:Class>
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Seafood -->
+    <owl:Class rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Seafood">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+    </owl:Class>
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Dessert -->
+    <owl:Class rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Dessert">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+    </owl:Class>
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Beverage -->
+    <owl:Class rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Beverage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+    </owl:Class>
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Condiment -->
+    <owl:Class rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Condiment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+    </owl:Class>
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Nut -->
+    <owl:Class rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Nut">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+    </owl:Class>
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Apple">
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Fruit"/>
+        <foodOnto:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</foodOnto:hasCalories>
+        <foodOnto:hasProtein rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3</foodOnto:hasProtein>
+    </owl:NamedIndividual>
+    
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#ApplePie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+        <foodOnto:hasIngredient rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Apple"/>
+		<foodOnto:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">237</foodOnto:hasCalories>
+        <foodOnto:hasProtein rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.9</foodOnto:hasProtein>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#ChickenSoup">
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+        <foodOnto:hasIngredient rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Chicken"/>
+		<foodOnto:hasIngredient rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Carrot"/>
+		<foodOnto:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</foodOnto:hasCalories>
+        <foodOnto:hasProtein rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.5</foodOnto:hasProtein>
+	</owl:NamedIndividual>
+    
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Carrot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Vegetable"/>
+        <foodOnto:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">41</foodOnto:hasCalories>
+        <foodOnto:hasProtein rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9</foodOnto:hasProtein>
+    </owl:NamedIndividual>
+    
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Cheese">
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Dairy"/>
+        <foodOnto:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">402</foodOnto:hasCalories>
+        <foodOnto:hasProtein rdf:datatype="http://www.w3.org/2001/XMLSchema#float">25.0</foodOnto:hasProtein>
+    </owl:NamedIndividual>
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Chicken">
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Meat"/>
+        <foodOnto:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">239</foodOnto:hasCalories>
+        <foodOnto:hasProtein rdf:datatype="http://www.w3.org/2001/XMLSchema#float">27.0</foodOnto:hasProtein>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+Prompt: 
+Retrieve all individuals of the class "Food" along with their calories and protein content.
+
+Answer:
+//The SPARQL query goes here 
+```
+PREFIX foodOnto: <http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#>
+SELECT ?food ?calories ?protein
+WHERE {
+?food rdf:type foodOnto:Food.
+?food foodOnto:hasCalories ?calories.
+?food foodOnto:hasProtein ?protein.
+}
+```
+
+Prompt: 
+Get a list of nutritional values for all foods
+
+Answer:
+//The SPARQL query goes here 
+```
+PREFIX foodOnto: <http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#>
+SELECT ?food ?calories ?protein
+WHERE {
+?food rdf:type ?type . 
+?type rdfs:subClassOf* foodOnto:Food.
+?food foodOnto:hasCalories ?calories.
+?food foodOnto:hasProtein ?protein.
+}
+```
+
+Make sure to answer the following question correctly.
+Prompt:
+{{prompt}}
+Answer:
+//The SPARQL query goes here 
+```
+
