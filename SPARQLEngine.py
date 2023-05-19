@@ -42,8 +42,11 @@ class SPARQLEngine:
         for row in results:
             to_add = []
             for element in row:
-                parsed = element.n3().replace(">", "").replace("<", "")
-                parsed = re.sub("http:.*#", "", parsed)
+                if element is None:
+                    parsed = "-"
+                else:
+                    parsed = element.n3().replace(">", "").replace("<", "")
+                    parsed = re.sub("http:.*#", "", parsed)
                 to_add.append(parsed)
             parsed_results.append(to_add)
         return headers, parsed_results
