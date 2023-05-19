@@ -1,0 +1,316 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto/"
+     xml:base="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:foodOnto="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#hasIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#hasIngredient">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#hasCalories -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#hasCalories">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#hasProtein -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#hasProtein">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#hasProtein -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#hasProtein">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#hasSodium -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#hasSodium">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#hasCalories -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#hasCalories">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Dairy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Dairy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+    
+
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Fruit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Fruit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Meat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Meat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Vegetable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Vegetable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+    </owl:Class>
+    
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Grain -->
+    <owl:Class rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Grain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+    </owl:Class>
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Seafood -->
+    <owl:Class rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Seafood">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+    </owl:Class>
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Dessert -->
+    <owl:Class rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Dessert">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+    </owl:Class>
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Beverage -->
+    <owl:Class rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Beverage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+    </owl:Class>
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Condiment -->
+    <owl:Class rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Condiment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+    </owl:Class>
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Nut -->
+    <owl:Class rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Nut">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+    </owl:Class>
+
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Apple -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Apple">
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Fruit"/>
+        <foodOnto:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</foodOnto:hasCalories>
+        <foodOnto:hasProtein rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3</foodOnto:hasProtein>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#ApplePie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#ApplePie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+        <foodOnto:hasIngredient rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Apple"/>
+		<foodOnto:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">237</foodOnto:hasCalories>
+        <foodOnto:hasProtein rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.9</foodOnto:hasProtein>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#ChickenSoup">
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+        <foodOnto:hasIngredient rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Chicken"/>
+		<foodOnto:hasIngredient rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Carrot"/>
+		<foodOnto:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</foodOnto:hasCalories>
+        <foodOnto:hasProtein rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.5</foodOnto:hasProtein>
+	</owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Carrot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Carrot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Vegetable"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+        <foodOnto:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">41</foodOnto:hasCalories>
+        <foodOnto:hasProtein rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9</foodOnto:hasProtein>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Cheese -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Cheese">
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Dairy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+        <foodOnto:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">402</foodOnto:hasCalories>
+        <foodOnto:hasProtein rdf:datatype="http://www.w3.org/2001/XMLSchema#float">25.0</foodOnto:hasProtein>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Chicken -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Chicken">
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Meat"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+        <foodOnto:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">239</foodOnto:hasCalories>
+        <foodOnto:hasProtein rdf:datatype="http://www.w3.org/2001/XMLSchema#float">27.0</foodOnto:hasProtein>
+    </owl:NamedIndividual>
+
+    
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Oats -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Oats">
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Grain"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+        <foodOnto:hasProtein rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.15</foodOnto:hasProtein>
+        <foodOnto:hasSodium rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2</foodOnto:hasSodium>
+        <foodOnto:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">389</foodOnto:hasCalories>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Salmon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Salmon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Seafood"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+        <foodOnto:hasProtein rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.6</foodOnto:hasProtein>
+        <foodOnto:hasSodium rdf:datatype="http://www.w3.org/2001/XMLSchema#float">59</foodOnto:hasSodium>
+        <foodOnto:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">206</foodOnto:hasCalories>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#ChocolateCake -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#ChocolateCake">
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Dessert"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+        <foodOnto:hasProtein rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.4</foodOnto:hasProtein>
+        <foodOnto:hasSodium rdf:datatype="http://www.w3.org/2001/XMLSchema#float">381</foodOnto:hasSodium>
+        <foodOnto:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">452</foodOnto:hasCalories>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#OrangeJuice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#OrangeJuice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Beverage"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+        <foodOnto:hasProtein rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.7</foodOnto:hasProtein>
+        <foodOnto:hasSodium rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0</foodOnto:hasSodium>
+        <foodOnto:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">112</foodOnto:hasCalories>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Ketchup -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Ketchup">
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Condiment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+        <foodOnto:hasProtein rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8</foodOnto:hasProtein>
+        <foodOnto:hasSodium rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1500</foodOnto:hasSodium>
+        <foodOnto:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</foodOnto:hasCalories>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Almonds -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Almonds">
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Nut"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/emnug/ontologies/2023/4/foodOnto#Food"/>
+        <foodOnto:hasProtein rdf:datatype="http://www.w3.org/2001/XMLSchema#float">21.15</foodOnto:hasProtein>
+        <foodOnto:hasSodium rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1</foodOnto:hasSodium>
+        <foodOnto:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">576</foodOnto:hasCalories>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
