@@ -36,7 +36,10 @@ class SPARQLEngine:
             The headers and results of the query
         """
         results = self.graph.query(query)
-        headers = [str(header) for header in results.vars]
+        try:
+            headers = [str(header) for header in results.vars]
+        except:
+            headers = []
 
         parsed_results = []
         for row in results:
